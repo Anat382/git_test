@@ -1,3 +1,13 @@
+
+
+
+
+
+Материал получен по ссылке -
+https://www.youtube.com/watch?v=JdUzxh8miQw&list=PLuY6eeDuleIOMB2R_Kky05ZfiAx2_pbAH&index=1
+
+
+
 C:\Users\User>cd /d E:\
 E:\>cd e:\GIT уроки\gittest
 e:\GIT уроки\gittest>git init #инициализируем репозиторий
@@ -41,7 +51,73 @@ PS E:\GITуроки\git_test> git push
 
 
 
-Алиасы --- добавляются в файл -- "C:\Users\User\.gitconfig"
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Алиасы (сокращения для комманд) --- добавляются в файл -- "C:\Users\User\.gitconfig"
 
----- другие команды ---
-git checkout -- index.html --- отменить сделанные изменения
+---- ИЗМЕНЕНИЯ ---
+git checkout -- index.html       --- отменить сделанные изменения
+git checkout .  ---- отклоенение изменений во всех файлах
+
+-- отменить изменения полсе add -
+git reset  "t2.html"
+git checkout "t2.html"  ----- если нужно указать несколько файлов то ставим точку
+
+-- отменить изменения полсе commit -
+git l(используется алиас) - отражает логи все комиты
+git reset --hard HEAD^1  ---- возвращаемся на один commit назад
+
+-- отменить изменения полсе commit но не удалять-
+git reset --soft HEAD^1
+git checkout -- .
+
+
+
+---------------------------- #8 Уроки Git+GitHub - Работа с ветками git branch  ------------
+
+---------------------- Работа с ветками localno без push ---------
+branch  -- ветка
+git branch используется алиас  br
+
+git br - отражает активную ветку
+git br -v  -- отражает последний commit
+git br develop --- создаем новую ветку develop
+git checkout develop  -- переходим на ветку develop после работаем с этой веткой
+
+git checkout -b about  --- создание новой ветки и переход на нее
+
+выведем все commit  -  git g
+g = log --graph --abbrev-commit --decorate --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(dim white) - %an%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n %C(white)%s%C(reset)'
+
+git br -m "mufix" ---- переименование ветки
+
+git l  - отражаем изменения
+git checkout c73798d    ---- перерход к commit  c73798d берем из git l 
+ 
+ !!!!!!!!!! После выбора commit можем вносить изменения !!!!!!
+
+git push --set-upstream origin develop  --- применяем изменения после добаление веток
+
+git br -d mufix  -- удаление ветки mufix
+ 
+git push
+
+
+---------------------------- #9 Уроки Git+GitHub - Сохраняем фрагменты кода, создаем свои Gist  ------------
+
+https://gist.github.com/ -- вариант создания на сайте
+
+1) Устанавливаем расширение "gist" в "Visual Code";
+2) Заходим на главную своего профиля в Github, то есть "https://github.com/settings/profile" далее "Developer sesttings" далее "Personal acces tokens" выбираем "generate new token", и копируем наш сгенерированный код(token);
+3) Заходим в "Visual Studio", жмем F1, вводим "gist" и выбираем "GIST: select profile";
+4) Вводим в появившееся окно наш сгенерированный TOKEN, далее вас попросят ввести имя пользователя, то есть ВАШЕ имя привязанное к аккаунту на github.
+5) Проверить все ли работает ТЕПЕРЬ, и если да, то можно станцевать чечётку и скушать конфетку на радостях.
+P. S. Автору отдельное спасибо за контент! не поленитесь поставить ему лайк!
+
+https://github.com/settings/tokens --- создание токена для иджентификации
+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 	
+
+Выделяем код и нажимаем F1
+Вводим - gist и выбераем Create new gist  -- Заполняем шаги и содается новый gist
+Для использования созданного gist нажимаем F1 и выбераем gist insert Gist text from file - будет предложен выбор ранее созданных gist
+
+
+
