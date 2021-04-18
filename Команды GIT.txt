@@ -1,0 +1,47 @@
+C:\Users\User>cd /d E:\
+E:\>cd e:\GIT уроки\gittest
+e:\GIT уроки\gittest>git init #инициализируем репозиторий
+
+# Авторизация
+e:\GIT уроки\gittest>git config --global user.name "Анат382"
+e:\GIT уроки\gittest>git config --global user.email 1990anatolik1990@mail.ru
+
+e:\GIT уроки\gittest>git config --list
+
+
+---- ------- ------ --- PS  - комнады введенные в терминале Visual Studio Code ---------- - - -  - - -  - ---------
+
+Регистрируем в git репозиторий, добавляем его и отправляем тудуа файлы
+
+PS E:\GIT уроки\gittest> git init
+PS E:\GIT уроки\gittest> git add .
+PS E:\GIT уроки\gittest> git commit -m "first commit" 
+PS E:\GIT уроки\gittest> git remote add origin https://github.com/Anat382/git_test.git
+PS E:\GIT уроки\gittest> git push -u origin master
+
+
+
+Скачивыние репозитория
+
+PS C:\Users\User> E: cd e:\GIT уроки\gittest   
+PS E:\> cd GITуроки
+PS E:\GITуроки> git clone https://github.com/Anat382/git_test.git
+
+
+Добавляем изменения
+
+при начале работы выполянем команду git pull -- получаем все изменения которые были сделаны в репозиторие
+
+PS E:\GITуроки\git_test> git add .
+PS E:\GITуроки\git_test> git add "указываем файл" # если нужно перенести только один файл
+PS E:\GITуроки\git_test> git status
+PS E:\GITуроки\git_test> git commit -m "Наши первые изменения"
+PS E:\GITуроки\git_test> git status
+PS E:\GITуроки\git_test> git push
+
+
+
+Алиасы --- добавляются в файл -- "C:\Users\User\.gitconfig"
+
+---- другие команды ---
+git checkout -- index.html --- отменить сделанные изменения
